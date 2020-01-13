@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  become: true
+  vars_files: /home/ansible/spinup-ec2instance/files/keys.yml
+  roles: 
+    - spinup-ec2instance 
+#   - kubernetes-setup
+

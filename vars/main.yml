@@ -1,0 +1,11 @@
+---
+#
+# vars file for spinup-ec2instance
+#
+imageid: ami-0015b9ef68c77328d #CentOS7 community work]
+#imageid: ami-04763b3055de4860b #Ubuntu Server 16.04 LTS
+remoteu: centos
+#remoteu: ubuntu
+#remoteu: ec2-user
+
+

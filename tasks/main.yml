@@ -1,0 +1,8 @@
+---
+# # tasks file for spinup-ec2instance
+#
+- name: Launch ec2 instances
+  include_tasks: ec2-inmemory-inventory.yml
+
+- name: Execute tasks on created instance 
+  include_tasks: execute_tasks_remote.yml 
