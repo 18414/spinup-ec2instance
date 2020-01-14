@@ -7,5 +7,7 @@ imageid: ami-0015b9ef68c77328d #CentOS7 community work]
 remoteu: centos
 #remoteu: ubuntu
 #remoteu: ec2-user
+itype: t2.micro
+#itype: t2.xlarge
 
 
