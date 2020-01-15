@@ -5,17 +5,17 @@
     state: present
     generate_ssh_key: yes
     register: nuser
-  delegate_to: "{{ item }}"
-  delegate_facts: true
-  with_items: "{{ groups['cluster'] }}"
+#  delegate_to: "{{ item }}"
+#  delegate_facts: true
+#  with_items: "{{ groups['cluster'] }}"
 
 - name: Give sudo access to user
   lineinfile:
     path: /etc/sudoers
     regexp: "^root"
     line: "ansible ALL=(ALL) NOPASSWD: ALL"
-  delegate_to: "{{ item }}"
-  with_items: "{{ groups['cluster'] }}"
+#  delegate_to: "{{ item }}"
+#  with_items: "{{ groups['cluster'] }}"
 
 - name: Send key to the remote server
   authorized_key:
@@ -23,7 +23,7 @@
     manage_dir: true
     key: "{{ lookup('file', '/home/ansible/.ssh/id_rsa.pub') }}"
     state: present
-  delegate_to: "{{ item }}"
-  with_items: "{{ groups['cluster'] }}"
+#  delegate_to: "{{ item }}"
+ # with_items: "{{ groups['cluster'] }}"
 
 

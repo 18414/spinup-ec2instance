@@ -9,5 +9,14 @@ remoteu: centos
 #remoteu: ec2-user
 itype: t2.micro
 #itype: t2.xlarge
+site_name: "kubernetes-test"
+aws_tags:
+  Name: "{{ site_name }}"
+  Application: "{{ site_name }}"
+  Environment: "Development"
+  Costcenter: "1xxxxxxx3"
+  Division: "My"
+  Consumer: "bmahajan0@gmail.com"
+
 
 
